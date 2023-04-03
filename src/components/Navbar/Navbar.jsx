@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "../Link/Link";
-import { BeakerIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const routes = [
@@ -16,6 +16,7 @@ const Navbar = () => {
   return (
     <nav>
       <div onClick={() => setOpen(!open)}>
+        <span>{open === true ? "open" : "close"}</span>
         <Bars3Icon className="h-6 w-6 text-purple-500" />
       </div>
       <ul className="md:flex">
