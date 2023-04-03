@@ -14,12 +14,21 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav>
-      <div onClick={() => setOpen(!open)}>
-        <span>{open === true ? "open" : "close"}</span>
-        <Bars3Icon className="h-6 w-6 text-purple-500" />
+    <nav className="bg-purple-400">
+      <div className="md:hidden" onClick={() => setOpen(!open)}>
+        <span>
+          {open === true ? (
+            <XMarkIcon className="h-6 w-6 text-purple-500" />
+          ) : (
+            <Bars3Icon className="h-6 w-6 text-purple-500" />
+          )}
+        </span>
       </div>
-      <ul className="md:flex">
+      <ul
+        className={`md:flex absolute md:static duration-500 pl-8 pb-4 bg-purple-400 py-2 ${
+          open ? "top-6" : "-top-48"
+        }`}
+      >
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
