@@ -11,7 +11,9 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <h1 className="text-7xl text-purple-600">Hello from tailwind</h1>
+      <h1 className="text-4xl text-center mt-2 mb-2 md:text-7xl text-purple-600">
+        Hello from tailwind
+      </h1>
       <Pricelist></Pricelist>
     </div>
   );
