@@ -31,19 +31,21 @@ const PhoneBar = () => {
           };
           return phoneInfo;
         });
-        console.log(phonesData);
+        // console.log(phonesData);
         setPhones(phonesData);
       });
   }, []);
 
   return (
-    <div>
-      <BarChart width={1000} height={500} data={phones}>
-        <Bar dataKey="price" fill="#8884d8" />
-        <XAxis dataKey="name"></XAxis>
-        <YAxis></YAxis>
-        <Tooltip></Tooltip>
-      </BarChart>
+    <div className="h-96">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart width={2000} height={500} data={phones}>
+          <Bar dataKey="price" fill="#8884d8" />
+          <XAxis dataKey="name"></XAxis>
+          <YAxis></YAxis>
+          <Tooltip></Tooltip>
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };
