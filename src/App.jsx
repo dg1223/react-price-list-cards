@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Pricelist from "./components/Pricelist/Pricelist";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
         Hello from tailwind
       </h1>
       <Pricelist></Pricelist>
+      <Dashboard></Dashboard>
     </div>
   );
 }
